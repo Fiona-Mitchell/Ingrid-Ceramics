@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ingrid Aaroe Ceramics</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+      <a class="current" href="index.html"> <img class="logo" src="images/logo.png" alt="Ingrid Aarow Ceramics Logo"></a>
+    <ul>
+      <div class="links">
+        <li> <a href="contact.html">Contact</a> </li>
+        <li> <a href="about.html">About</a> </li>
+        <li> <a href="portfolio.html">Portfolio</a> </li>
+      </div>
+    </ul>
+  </div>
+<div class="mobile">
+<img src="images/background-2.jpg" style="width:100%" alt="ceramics">
+<img src="images/background.jpg" style="width:100%" alt="ceramics">
+<img src="images/background-3.jpg" style="width:100%" alt="ceramics">
+</div>
+
+<div class="slideshow-container">
+  <div class="ceramics fade">
+    <img src="images/background-2.jpg" style="width:100%" alt="ceramics">
+  </div>
+
+  <div class="ceramics fade">
+    <img src="images/background.jpg" style="width:100%" alt="ceramics">
+  </div>
+
+  <div class="ceramics fade">
+    <img src="images/background-3.jpg" style="width:100%" alt="ceramics">
+  </div>
+</div>
+
+  <div class="menu-dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+
+  <script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("ceramics");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000);
+  }
+  </script>
+  </body>
+  <footer>
+    <a href="https://www.instagram.com/ingridaaroeceramics/">
+      <img class="social-media" src="images/instagram.png">
+    </a>
+    <br>
+    <h3>London, England</h3>
+    <p>&copy; Ingrid Aaroe 2020</p>
+  </footer>
+  </html>
